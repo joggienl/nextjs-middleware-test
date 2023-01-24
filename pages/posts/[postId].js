@@ -6,7 +6,7 @@ export default function PostPage({post}) {
       <h1>{post?.title}</h1>
       <p>{post?.body}</p>
       <br/>
-      <Link href="/blogs">Back to all posts</Link>
+      <Link href="/posts">Back to all posts</Link>
       <br/>
       <br/>
       <Link href="/">Link back home</Link>
@@ -29,7 +29,7 @@ export async function getStaticProps({params: {postId = null}}) {
   }
 
   try {
-    const blog = await fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`).then((res) => {
+    const post = await fetch(`https://jsonplaceholder.typicode.com/posts/${postId}`).then((res) => {
       if (res.ok) {
         return res.json();
       }

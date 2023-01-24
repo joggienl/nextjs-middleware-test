@@ -4,6 +4,9 @@ export default function PostsPage({posts}) {
   return (
     <>
       <h1>Posts overview</h1>
+      <p>This project uses data from <a
+        href="https://jsonplaceholder.typicode.com/guide/">https://jsonplaceholder.typicode.com.</a>
+      </p>
       <ul>
         {posts?.length > 0 && posts.map(post => (
           <li key={`post_overview_${post?.id}`}><Link
